@@ -5,7 +5,7 @@
 
 `ruijie_general.sh`使用`curl`命令实现`url encode`
 
-前者兼容性更好但docker镜像更大
+推荐前者，兼容性更好
 
 ## 使用方法
 修改`ruijie_general_python.sh`中的`USER_ID`和`PASSWORD`为你的学号和密码
@@ -14,7 +14,9 @@
 
 执行 `./ruijie_general_python.sh`
 或
-构建docker容器
+使用`dockerfile`构建镜像
+
+注：windows下可使用`git bash`命令行执行sh文件
 
 ## More
 脚本基于 https://github.com/callmeliwen/RuijiePortalLoginTool 实现
