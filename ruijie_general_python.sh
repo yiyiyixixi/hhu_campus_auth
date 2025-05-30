@@ -8,8 +8,9 @@
 #fi
 
 SERVICE="中国移动(CMCC NET)" #可选值为：校园外网服务(out-campus NET)  中国电信(常州)   中国联通(常州)     中国移动(CMCC NET)
-PASSWORD=""
 USER_ID=""
+PASSWORD=""
+
 
 #Exit the script when is already online, use www.google.cn/generate_204 to check the online status
 captiveReturnCode=`curl -s -I -m 10 -o /dev/null -s -w %{http_code} http://www.google.cn/generate_204`
@@ -41,7 +42,7 @@ ENCODED_SERVICE=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote
 ENCODED_PASSWORD=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(urllib.parse.quote(sys.argv[1])))" "$PASSWORD")
 
 echo "ENCODED_SERVICE: $ENCODED_SERVICE"
-echo "ENCODED_Password: $ENCODED_Password"
+echo "ENCODED_Password: $ENCODED_PASSWORD"
 
 #Send Ruijie eportal auth request and output result
 if [ -n "${loginURL}" ]; then
