@@ -21,5 +21,5 @@
 ## More
 脚本基于 https://github.com/callmeliwen/RuijiePortalLoginTool 实现
 
-指定网卡 loginPageURL=`curl -s -L --interface wlan0 -v "http://10.96.0.155" | awk -F \' '{print $2}'`
+指定网卡 loginPageURL=\`curl -s -L --interface wlan0 -v "http://10.96.0.155" | awk -F \' '{print $2}'\`
 
